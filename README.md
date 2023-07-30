@@ -1,5 +1,5 @@
 # anki-server-docker
-Dockerfile which runs [Anki's sync server](https://docs.ankiweb.net/sync-server.html).
+Dockerfile which runs [Anki's built-in Self-Hosted Sync Server](https://docs.ankiweb.net/sync-server.html).
 
 ## Usage
 Run this in Docker or Kubernetes with users passed in as environment variables.
