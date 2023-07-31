@@ -1,4 +1,4 @@
-# anki-server-docker
+# docker-anki-server
 Dockerfile which runs [Anki's built-in Self-Hosted Sync Server](https://docs.ankiweb.net/sync-server.html).
 
 ## Usage
@@ -6,7 +6,7 @@ Run this in Docker or Kubernetes with users passed in as environment variables.
 ```bash
 docker run -it --rm \
   -e SYNC_USER1=myusername:mypasswd -p 80:8080 \
-  ghcr.io/dli7319/anki-server-docker:main
+  ghcr.io/dli7319/docker-anki-server:main
 ```
 For persistence, mount a volume to `/home/anki/.syncserver/`
 
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: anki
-          image: ghcr.io/dli7319/anki-server-docker:main
+          image: ghcr.io/dli7319/docker-anki-server:main
           imagePullPolicy: Always
           envFrom:
             - secretRef:
